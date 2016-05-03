@@ -1,6 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
-
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 
 /* Reset */
@@ -3084,6 +3084,7 @@
 			cursor: pointer;
 			background: rgba(0, 0, 0, 0.01);
 			-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+			display: none;
 		}
 
 		.poptrox-popup .nav-next:before,
@@ -3467,4 +3468,31 @@
 .profile-pic {
 	border-radius: 50%;
 	max-width: 200px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text {
+    font-size: 4.25em;
+    font-family: 'Source Sans Pro';
+    fill: transparent;
+    stroke-width: 1;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: draw 3s forwards linear;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
