@@ -7,10 +7,55 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/typed.js" type="text/javascript"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<!-- Place this tag in your head or just before your close body tag. -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<script>
+		$(function() {
+
+			$("#typed").typed({
+				strings: ["Hi I'm Daniel,", "A junior full stack web developer.", "Welcome to my portfolio,", "take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page.", "Thanks for stopping by!"],
+				typeSpeed: 40,
+				callback: function() {
+					shift();
+				}
+			});
+
+		});
+
+		function shift() {
+			$(".head-wrap").addClass("shift-text");
+			terminalHeight();
+		}
+
+		function terminalHeight() {
+			var termHeight = $(".terminal-height");
+			var value = termHeight.text();
+			value = parseInt(value);
+			setTimeout(function() {
+				if (value > 10) {
+					value = value - 1;
+					this.txtValue = value.toString();
+					termHeight.text(this.txtValue);
+					self.terminalHeight();
+				} else {
+					clearTimeout();
+				}
+			}, 10);
+		}
+	</script>
 </head>
 
 <body>
@@ -41,10 +86,26 @@
 		<div class="content container 75%">
 			<header>
 				<img class="profile-pic" src="images/DanielB.jpg" alt="">
-				<h2>Welcome.</h2>
+				<div class="header">
+					<div class="head-wrap">
+						<h1 class="h1">Welcome</h1>
+						<div class="text-editor-wrap">
+							<div class="title-bar"><span class="title">danielbennetts &mdash; bash &mdash; 80x<span class="terminal-height">25</span></span>
+							</div>
+							<div class="text-body">
+							~	$ <span id="typed"></span>
+							</div>
+						</div>
+						<span class="tagline">Be sure to checkout my Github below!</span>
+					</div>
+					<div class="wrap">
+						<div class="btn-wrap">
+							<a class="github-button" href="https://github.com/danbennetts" data-style="mega" data-count-href="/danbennetts/followers" data-count-api="/users/danbennetts#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @danbennetts on GitHub">Follow @danbennetts</a>						</div>
+					</div>
+				</div>
 			</header>
-			<p>I'm Daniel, a Junior Full Stack Web Developer. </br> Welcome to <strong>My Portfolio</strong>, take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page. Thanks for stopping by and be sure to checkout my github!</p>
-			<a href="http://github.com/danbennetts" class="icon fa-github"><span class="label">Github</span></a>
+
+			<!-- <p>I'm Daniel, a Junior Full Stack Web Developer. </br> Welcome to <strong>My Portfolio</strong>, take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page. Thanks for stopping by and be sure to checkout my github!</p> -->
 			<footer>
 				<a href="#one" class="button style2 down">More</a>
 			</footer>
@@ -70,7 +131,7 @@
 				<h2>What I'm Looking For</h2>
 			</header>
 			<p>I am looking for opportunities to work in a workplace with a positive, collaborative and supportive ethos; one where I can learn from my peers, contribute and flourish.</p>
-			</div>
+		</div>
 		</div>
 		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
@@ -223,15 +284,6 @@
 
 	</footer>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
 
 </body>
 
