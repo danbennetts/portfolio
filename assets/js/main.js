@@ -227,3 +227,38 @@
 	});
 
 })(jQuery);
+
+
+// Fake Bash Terminal
+$(function() {
+
+	$("#typed").typed({
+		strings: ["Hi I'm Daniel,", "A junior full stack web developer.", "Welcome to my portfolio,", "take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page.", "Thanks for stopping by!"],
+		typeSpeed: 40,
+		callback: function() {
+			shift();
+		}
+	});
+
+});
+
+function shift() {
+	$(".head-wrap").addClass("shift-text");
+	terminalHeight();
+}
+
+function terminalHeight() {
+	var termHeight = $(".terminal-height");
+	var value = termHeight.text();
+	value = parseInt(value);
+	setTimeout(function() {
+		if (value > 10) {
+			value = value - 1;
+			this.txtValue = value.toString();
+			termHeight.text(this.txtValue);
+			self.terminalHeight();
+		} else {
+			clearTimeout();
+		}
+	}, 10);
+}

@@ -22,40 +22,6 @@
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<script>
-		$(function() {
-
-			$("#typed").typed({
-				strings: ["Hi I'm Daniel,", "A junior full stack web developer.", "Welcome to my portfolio,", "take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page.", "Thanks for stopping by!"],
-				typeSpeed: 40,
-				callback: function() {
-					shift();
-				}
-			});
-
-		});
-
-		function shift() {
-			$(".head-wrap").addClass("shift-text");
-			terminalHeight();
-		}
-
-		function terminalHeight() {
-			var termHeight = $(".terminal-height");
-			var value = termHeight.text();
-			value = parseInt(value);
-			setTimeout(function() {
-				if (value > 10) {
-					value = value - 1;
-					this.txtValue = value.toString();
-					termHeight.text(this.txtValue);
-					self.terminalHeight();
-				} else {
-					clearTimeout();
-				}
-			}, 10);
-		}
-	</script>
 </head>
 
 <body>
@@ -85,7 +51,6 @@
 	<section id="intro" class="main style1 dark fullscreen">
 		<div class="content container 75%">
 			<header>
-				<img class="profile-pic" src="images/DanielB.jpg" alt="">
 				<div class="header">
 					<div class="head-wrap">
 						<h1 class="h1">Welcome</h1>
