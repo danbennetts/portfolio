@@ -233,8 +233,8 @@
 $(function() {
 
 	$("#typed").typed({
-		strings: ["Hi I'm Daniel. ^3000", "A junior full stack web developer. ^2000", "Welcome to my portfolio. ^1000", "take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page. ^2000", "Thanks for stopping by!"],
-		typeSpeed: 40,
+		strings: ["Hi I'm Daniel.^3000", "A junior full stack web developer.^2000", "Welcome to my portfolio.^1000", "Take a look around and if you are interested in any of my projects, just drop me a line at the bottom of the page.^2000", "Thanks for stopping by!"],
+		typeSpeed: 60,
 		callback: function() {
 			shift();
 		}
